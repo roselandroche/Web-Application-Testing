@@ -38,7 +38,7 @@ function ChangeButton(props) {
 
 
     return (
-        <button onClick={increase}>{props.name}</button>
+        <button className={'changeButton'} onClick={increase}>{props.name}</button>
     )
 }
 
