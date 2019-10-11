@@ -11,7 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <Display />
+      <Display 
+        ballCount={balls}
+        strikeCount={strikes}
+      />
       <Dashboard 
         strikes={strikes}
         updateStrikes={updateStrikes}
