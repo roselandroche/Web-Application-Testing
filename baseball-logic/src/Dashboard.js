@@ -2,50 +2,42 @@ import React from 'react';
 import ChangeButton from './ChangeButton';
 
 function Dashboard(props) {
-
-    // function increaseStrike() {
-    //     if(props.name === 'Strike' && props.strikes < 3) {
-    //         props.updateStrikes(props.strikes++)
-    //         alert(`Strrrriiiikkkkeeee!`)
-    //     } else if (props.name === 'Strike' && props.strikes === 3) {
-    //         alert('YOU ARE OUT!')
-    //         props.updateStrikes(0)
-    //         props.updateBalls(0)
-    //         props.updateFouls(0)
-    //         props.updateHit(false)
-    //     }
-    // }
     
     return (
         <div className='buttons'>
             {/* Buttons to increase strikes, balls, fouls, and hits */}
             <ChangeButton 
                 name='Strike' 
-                value={props.strikes}
                 strikes={props.strikes} 
                 updateStrikes={props.updateStrikes} 
                 updateBalls={props.updateBalls}
                 updateFouls={props.updateFouls}
                 updateHit={props.updateHit}
-                // onClick={() => console.log('hi')}
             />
             <ChangeButton 
                 name = 'Ball' 
                 ball={props.balls} 
+                updateStrikes={props.updateStrikes}
                 updateBalls={props.updateBalls}
-                // onClick={}
+                updateFouls={props.updateFouls}
+                updateHit={props.updateHit}
             />
             <ChangeButton 
                 name='Foul' 
                 foul={props.fouls} 
+                strikes={props.strikes}
                 updateFouls={props.updateFouls}
-                // onClick={}
+                updateStrikes={props.updateStrikes}
+                updateBalls={props.updateBalls}
+                updateHit={props.updateHit}
             />
             <ChangeButton 
                 name='Hit' 
                 hit={props.hit} 
+                updateFouls={props.updateFouls}
+                updateStrikes={props.updateStrikes}
+                updateBalls={props.updateBalls}
                 updateHit={props.updateHit}
-                // onClick={}
             />
             {/* Cause updates and rerenders to Display */}
         </div>
