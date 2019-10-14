@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Display from './Display';
 import Dashboard from './Dashboard';
+import CheerButton from './Cheer';
 
 function App() {
   const [strikes, updateStrikes] = useState(0);
@@ -25,6 +26,7 @@ function App() {
         hit={hit}
         updateHit={updateHit}
       />
+      <CheerButton />
     </div>
   );
 }
